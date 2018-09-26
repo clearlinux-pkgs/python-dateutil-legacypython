@@ -6,7 +6,7 @@
 #
 Name     : python-dateutil-legacypython
 Version  : 2.6.1
-Release  : 41
+Release  : 42
 URL      : https://github.com/dateutil/dateutil/releases/download/2.6.1/python-dateutil-2.6.1.tar.gz
 Source0  : https://github.com/dateutil/dateutil/releases/download/2.6.1/python-dateutil-2.6.1.tar.gz
 Source99 : https://github.com/dateutil/dateutil/releases/download/2.6.1/python-dateutil-2.6.1.tar.gz.asc
@@ -15,9 +15,11 @@ Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: python-dateutil-legacypython-license
 Requires: python-dateutil-legacypython-python
+Requires: python-dateutil-legacypython-legacypython
 Requires: six
 BuildRequires : buildreq-distutils
 BuildRequires : buildreq-distutils3
+BuildRequires : python-dateutil-legacypython-legacypython
 BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 BuildRequires : six
@@ -60,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537969542
+export SOURCE_DATE_EPOCH=1537970360
 python2 setup.py build -b py2
 
 %check
